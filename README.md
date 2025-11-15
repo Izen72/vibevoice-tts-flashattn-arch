@@ -34,8 +34,9 @@ This repo is structured like this:
 ├── command                     # Author's cheat sheet / notes
 ├── stack_test.py               # (Optional) Test before running*
 └── .venv/                      # Created by uv (ignored in git)
-````
+
 *or after; I ain't telling you what to do.
+````
 
 VibeVoice itself lives in `./VibeVoice`.
 Everything else in this README happens from the **repo root**.

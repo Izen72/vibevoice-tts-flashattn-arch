@@ -202,17 +202,10 @@ uv pip install \
   --index-url https://download.pytorch.org/whl/cu121
 ```
 
-Verify:
+Verify by running stack_test.py:
 
 ```bash
-python - << 'PY'
-import torch
-print("torch:", torch.__version__)
-print("cuda:", torch.version.cuda)
-print("cuda available:", torch.cuda.is_available())
-if torch.cuda.is_available():
-    print("device:", torch.cuda.get_device_name(0))
-PY
+python stack_test.py
 ```
 
 You should see something like:
@@ -222,6 +215,7 @@ torch: 2.5.1+cu121
 cuda: 12.1
 cuda available: True
 device: NVIDIA GeForce RTX 3070 Laptop GPU
+[and flash attention will error out - intended for now]
 ```
 
 If `cuda_available` is `False`, fix your NVIDIA / CUDA install before continuing.
@@ -273,18 +267,16 @@ CUDA_HOME=/opt/cuda TMPDIR=$TMPDIR \
   uv pip install flash-attn==2.8.3 --no-build-isolation
 ```
 
-Quick smoke test:
+Now we test with stack_test_py again, and we should see:
 
-```bash
-python - << 'PY'
-import torch
-import flash_attn
-print("flash_attn imported OK")
-print("torch:", torch.__version__)
-PY
+
+```text
+torch: 2.5.1+cu121
+cuda: 12.1
+cuda available: True
+device: NVIDIA GeForce RTX 3070 Laptop GPU
+flash_attn imported OK
 ```
-
-If it doesn’t raise an ImportError, you’re good.
 
 ---
 

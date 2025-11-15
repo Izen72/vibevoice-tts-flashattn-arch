@@ -1,0 +1,66 @@
+# ----------------------------------------
+# Python / Virtualenv / uv
+# ----------------------------------------
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+*.egg
+
+# uv / pip metadata (just in case)
+pip-wheel-metadata/
+pip-selfcheck.json
+
+# ----------------------------------------
+# Jupyter / Notebooks
+# ----------------------------------------
+.ipynb_checkpoints/
+*.ipynb~
+
+# ----------------------------------------
+# IDE / Editor cruft
+# ----------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim/
+.emacs.d/
+*.code-workspace
+
+# ----------------------------------------
+# OS-specific junk
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------------------
+# Build / dist / cache
+# ----------------------------------------
+build/
+dist/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# ----------------------------------------
+# Project-specific
+# ----------------------------------------
+# VibeVoice build metadata
+VibeVoice/vibevoice.egg-info/
+
+# If you ever create local logs or scratch files, add them below, e.g.:
+# logs/
+# *.log
+# local_config.json
+

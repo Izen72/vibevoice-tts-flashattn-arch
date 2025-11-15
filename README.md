@@ -110,7 +110,7 @@ uv python update-shell
 ```
 
 ---
-### 2.3 Example (note; Saba is a fish; a *ceryified* feesh)
+### 2.3 Example (note: Saba is a fish; a *certified* feesh)
 
 ```bash
 # CUDA
